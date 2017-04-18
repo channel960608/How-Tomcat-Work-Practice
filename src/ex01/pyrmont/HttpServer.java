@@ -54,7 +54,8 @@ public class HttpServer {
                 shutdown=request.getUri().equals(SHUTDOWN_COMMAND);
 
             }catch (Exception e){
-                e.printStackTrace();
+                //e.printStackTrace();
+                System.out.println("等待请求指令");
                 continue;
             }
         }

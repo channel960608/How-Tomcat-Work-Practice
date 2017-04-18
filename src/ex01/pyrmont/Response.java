@@ -25,7 +25,7 @@ public class Response {
         FileInputStream fis=null;
         try{
             File file=new File(HttpServer.WEB_ROOT,request.getUri());
-            if(!file.exists()){
+            if(file.exists()){
                 fis=new FileInputStream(file);
                 int ch=fis.read(bytes,0,BUFFER_SIZE);
                 while(ch!=-1){
