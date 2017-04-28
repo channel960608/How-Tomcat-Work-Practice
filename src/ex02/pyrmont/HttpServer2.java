@@ -8,14 +8,14 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * Created by channel on 2017/4/18.
+ * Created by channel on 2017/4/26.
  */
-public class HttpServer1 {
+public class HttpServer2 {
     private static final String SHUTDOWN_COMMAND="/SHUTDOWN";
     private boolean shutdown=false;
 
     public static void main(String[] args){
-        HttpServer1 server=new HttpServer1();
+        ex02.pyrmont.HttpServer2 server=new ex02.pyrmont.HttpServer2();
         server.await();
     }
 
@@ -50,7 +50,7 @@ public class HttpServer1 {
                 //check whether the request is for a servlet or a static source
                 //a request for a servlet begins with "/servket/"
                 if(request.getUri().startsWith("/servlet/")){
-                    ServletProcessor1 processor=new ServletProcessor1();
+                    ServletProcessor2 processor=new ServletProcessor2();
                     processor.process(request,response);
                 }
                 else{
@@ -69,3 +69,5 @@ public class HttpServer1 {
         }
     }
 }
+
+

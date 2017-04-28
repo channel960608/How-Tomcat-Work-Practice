@@ -25,6 +25,7 @@ public class Request {
         }
         catch (IOException e){
             e.printStackTrace();
+            i=0;
             i=-1;
         }
         for(int j=0;j<i;j++){

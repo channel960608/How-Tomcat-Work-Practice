@@ -43,7 +43,7 @@ public class Request implements ServletRequest{
 
     public String parseUri(String requestString){
         int index1,index2;
-        index1 =requestString.indexOf(' ');
+         index1 =requestString.indexOf(' ');
         if(index1!=-1){
             index2=requestString.indexOf(' ',index1+1);
             if(index2>index1)

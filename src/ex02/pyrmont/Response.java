@@ -32,6 +32,7 @@ public class Response implements ServletResponse {
             int ch=fis.read(bytes,0,BUFFER_SIZE);
             while(ch!=-1){
                 output.write(bytes,0,ch);
+                //output.write("ok".getBytes());
                 ch=fis.read(bytes,0,BUFFER_SIZE);
             }
         }
